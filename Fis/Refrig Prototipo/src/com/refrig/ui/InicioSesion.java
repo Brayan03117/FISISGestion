@@ -31,9 +31,6 @@ public class InicioSesion extends javax.swing.JFrame
     {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         iniciarBoton = new javax.swing.JButton();
         registrarseBoton = new javax.swing.JButton();
         salirBoton = new javax.swing.JButton();
@@ -41,12 +38,59 @@ public class InicioSesion extends javax.swing.JFrame
         contrasenaText = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(74, 160, 9));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        iniciarBoton.setBackground(new java.awt.Color(142, 197, 101));
+        iniciarBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
+        iniciarBoton.setText("Iniciar sesion");
+        iniciarBoton.setBorderPainted(false);
+        jPanel1.add(iniciarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+
+        registrarseBoton.setBackground(new java.awt.Color(142, 197, 101));
+        registrarseBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
+        registrarseBoton.setText("Registrarse");
+        registrarseBoton.setBorderPainted(false);
+        registrarseBoton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                registrarseBotonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(registrarseBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+
+        salirBoton.setBackground(new java.awt.Color(142, 197, 101));
+        salirBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
+        salirBoton.setText("Salir");
+        salirBoton.setBorderPainted(false);
+        salirBoton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                salirBotonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(salirBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
+        jPanel1.add(usuarioText, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 140, -1));
+        jPanel1.add(contrasenaText, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 140, -1));
+
+        jLabel3.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
+        jLabel3.setText("Usuario");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 165, 59, -1));
+
+        jLabel4.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
+        jLabel4.setText("Contraseña");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 249, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(239, 206, 121));
 
@@ -61,11 +105,11 @@ public class InicioSesion extends javax.swing.JFrame
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(35, 35, 35))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,94 +123,9 @@ public class InicioSesion extends javax.swing.JFrame
                 .addGap(28, 28, 28))
         );
 
-        iniciarBoton.setBackground(new java.awt.Color(142, 197, 101));
-        iniciarBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
-        iniciarBoton.setText("Iniciar sesion");
-        iniciarBoton.setBorderPainted(false);
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        registrarseBoton.setBackground(new java.awt.Color(142, 197, 101));
-        registrarseBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
-        registrarseBoton.setText("Registrarse");
-        registrarseBoton.setBorderPainted(false);
-
-        salirBoton.setBackground(new java.awt.Color(142, 197, 101));
-        salirBoton.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
-        salirBoton.setText("Salir");
-        salirBoton.setBorderPainted(false);
-        salirBoton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                salirBotonActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
-        jLabel3.setText("Usuario");
-
-        jLabel4.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 12)); // NOI18N
-        jLabel4.setText("Contraseña");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(iniciarBoton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(23, 23, 23)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(usuarioText)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(contrasenaText)
-                        .addComponent(registrarseBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(54, 54, 54))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(salirBoton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usuarioText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(62, 62, 62)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iniciarBoton)
-                    .addComponent(registrarseBoton))
-                .addGap(31, 31, 31)
-                .addComponent(salirBoton)
-                .addGap(53, 53, 53))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -175,6 +134,12 @@ public class InicioSesion extends javax.swing.JFrame
     {//GEN-HEADEREND:event_salirBotonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_salirBotonActionPerformed
+
+    private void registrarseBotonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_registrarseBotonActionPerformed
+    {//GEN-HEADEREND:event_registrarseBotonActionPerformed
+        new Registro().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_registrarseBotonActionPerformed
 
     /**
      * @param args the command line arguments
